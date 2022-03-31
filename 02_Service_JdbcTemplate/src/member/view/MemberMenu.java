@@ -47,7 +47,7 @@ public class MemberMenu {
 				break;
 			case "2":
 				id = inputMemberId();
-				member = memberController.finMemberById(id);
+				member = memberController.findMemberById(id);
 				printMember(member);
 				break;
 			case "3":
