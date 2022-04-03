@@ -63,7 +63,7 @@ public class ProductMenu {
 	}
 	
 	/**
-	 * 전체 상품 목록 조회 메소드
+	 * 1. 전체 상품 목록 조회 메소드
 	 * @param list
 	 */
 	private void printProductList(List<Product> list) {
@@ -134,7 +134,7 @@ public class ProductMenu {
 	}
 	
 	/**
-	 * 2-1. 검색하고자 하는 데이터 입력 메소드
+	 * 2.1. 검색하고자 하는 데이터 입력 메소드
 	 * @param inputData
 	 * @return
 	 */
@@ -216,14 +216,14 @@ public class ProductMenu {
 				case "1":
 					updateData = inputUpdateData("상품명");
 					result = productController.updateProduct("name", id, updateData);
-					printResulting(result, "회원 정보 변경 성공!", "회원 정보 변경 실패!");
+					printResulting(result, "상품정보 변경이 완료되었습니다.", "상품정보 변경에 실패하였습니다.");
 					product = productController.selectOneProduct(id);
 					printOneProduct(product);
 					break;
 				case "2":
 					updateData = inputUpdateData("가격");
 					result = productController.updateProduct("price", id, updateData);
-					printResulting(result, "회원 정보 변경 성공!", "회원 정보 변경 실패!");
+					printResulting(result, "상품정보 변경이 완료되었습니다.", "상품정보 변경에 실패하였습니다.");
 					product = productController.selectOneProduct(id);
 					printOneProduct(product);
 					break;
@@ -305,7 +305,7 @@ public class ProductMenu {
 				System.out.println("잘못 입력하셨습니다.");
 			}
 			
-			printResulting(result, "회원 정보 변경 성공!", "회원 정보 변경 실패!");
+			printResulting(result, "상품정보 변경이 완료되었습니다.", "상품정보 변경에 실패하였습니다.");
 			product = productController.selectOneProduct(id);
 			printOneProduct(product);
 		}
