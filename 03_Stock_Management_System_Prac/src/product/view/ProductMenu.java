@@ -393,8 +393,6 @@ public class ProductMenu {
 			switch (choice) {
 			case "1":
 				id = inputProductId();
-				ioList = productController.selectAllProductIO(id);
-				printIOList(ioList);
 				break;
 			case "2":
 				id = inputProductId();
